@@ -1,0 +1,8 @@
+---
+- name: some task
+  hosts: all
+  become: true
+  tasks: 
+    - name: This command will change the working directory to somedir/
+      ansible.builtin.shell:
+          cmd: useradd user1
